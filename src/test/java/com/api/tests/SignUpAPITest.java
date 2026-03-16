@@ -15,7 +15,7 @@ public class SignUpAPITest {
 	@Test(description = "Verify if user is able to create an account")
 	public void signUpTest ()
 	{   
-		  SignUpRequest signUpRequest= new SignUpRequest.Builder().userName(RandomEntries.randomUserName()).email("reat1@test.com").firstName("Neer").lastName("Jo").
+		  SignUpRequest signUpRequest= new SignUpRequest.Builder().userName(RandomEntries.randomUserName()).email(RandomEntries.randomEmail()).firstName(RandomEntries.randomFirstName()).lastName(RandomEntries.randomLastName()).
 		  mobileNumber(RandomEntries.randomPhoneNumber()).password(RandomEntries.randomPassword()).build();
 		AuthService authService = new AuthService();
 		Response response= authService.signUp(signUpRequest);
